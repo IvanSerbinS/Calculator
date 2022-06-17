@@ -1,27 +1,26 @@
 package com.it_academy.calculator;
 
 public class Calculator {
-    //Addition method
-    public static double add(double a, double b) {
-        return a + b;
-    }
 
-    //Subtraction method
-    public static double subtract(double a, double b) {
-        return a - b;
-    }
-
-    //Multiplication method
-    public static double multiply(double a, double b) {
-        return a * b;
-    }
-
-    //Division method
-    public static double divide(double a, double divider) throws ArithmeticException {
-        if (divider == 0) {
-            throw new ArithmeticException("Division by zero is not allowed.");
+    public static double calculate(double a, char operation, double b) throws UnsupportedOperationException, ArithmeticException {
+        switch (operation) {
+            case ('+') -> {
+                return MathOperation.add(a, b);
+            }
+            case ('-') -> {
+                return MathOperation.subtract(a, b);
+            }
+            case ('*') -> {
+                return MathOperation.multiply(a, b);
+            }
+            case ('/') -> {
+                try {
+                    return MathOperation.divide(a, b);
+                } catch (ArithmeticException e) {//Catch division by 0. Enter new divider
+                    throw new ArithmeticException(e.getMessage());
+                }
+            }
+            default -> throw new UnsupportedOperationException("UnsupportedOperationException");
         }
-        return a / divider;
     }
 }
-

@@ -3,21 +3,18 @@ package com.it_academy.calculator;
 public class InputOperation {
     //Enter operation
     public static char enterOperation() {
-        System.out.print("Enter operation (+,-,*,/): ");
-        String str = CalculatorDemo.scan.nextLine();
-        if (str.length() == 1) {
-            switch (str.charAt(0)) {
-                case '+', '-', '*', '/' -> {
-                    return str.charAt(0);
+        do {
+            System.out.print("Enter operation (+,-,*,/): ");
+            String str = CalculatorMain.scan.nextLine();
+            if (str.length() == 1) {
+                switch (str.charAt(0)) {
+                    case '+', '-', '*', '/' -> {
+                        return str.charAt(0);
+                    }
+                    default -> System.out.println("Unknown operation: \"" + str + "\"");
                 }
-                default -> {//Enter new operation
-                    System.out.println("Unknown operation: \"" + str + "\"");
-                    return enterOperation();
-                }
-            }
-        }
-        System.out.println("Wrong operation. Enter one symbol.");
-        return enterOperation();
+            } else System.out.println("Wrong operation. Enter one symbol.");
+        } while (true);
     }
 }
 

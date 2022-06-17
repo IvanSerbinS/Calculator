@@ -7,31 +7,45 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculatorTest {
 
-    @DisplayName("Add, expected 1")
+    @DisplayName("Addition, expected -1")
     @Test
-    public void testAdd() {
-        assertEquals(1,
-                Calculator.add(-4, 5));
+    void testCalculateAddition(){
+        assertEquals(-1, Calculator.calculate(106.2,'+',-107.2),"Addition in calculate method works wrong");
     }
 
-    @DisplayName("Subtract, expected 6")
+    @DisplayName("Subtraction, expected -213.4")
     @Test
-    public void testSubtract() {
-        assertEquals(6,
-                Calculator.subtract(10,4));
+    void testCalculateSubtraction(){
+        assertEquals(-213.4, Calculator.calculate(-106.2,'-',107.2),"Subtraction in calculate method works wrong");
     }
 
-    @DisplayName("Multiply, expected -1")
+    @DisplayName("Multiplication, expected 0")
     @Test
-    public void testMultiply() {
-        assertEquals(-1,
-                Calculator.multiply(0.5,-2));
+    void testCalculateMultiplicationOfZeros(){
+        assertEquals(0, Calculator.calculate(0,'*',0), "Multiplication in calculate method works wrong");
     }
 
-    @DisplayName("Divide, expected -4")
+    @DisplayName("Division, expected 70.28724832214765")
     @Test
-    public void testDivide() {
-        assertEquals(-4,
-                Calculator.divide(2,-0.5));
+    void testCalculateDivision(){
+        assertEquals(70.28724832214765, Calculator.calculate(52.364,'/',0.745), "Division in calculate method works wrong");
+    }
+
+    @DisplayName("Division by Zero, expected ArithmeticException")
+    @Test
+    void testCalculateDivisionByZeroException(){
+        ArithmeticException thrown = assertThrows(ArithmeticException.class,() ->
+                        Calculator.calculate(5,'/',0)
+                , "ArithmeticException was expected");
+        assertEquals("Division by zero is not allowed.", thrown.getMessage(),"ArithmeticException in time of dividing by zero in calculate method wasn't thrown");
+    }
+
+    @DisplayName("Unsupported operation, expected UnsupportedOperationException")
+    @Test
+    void testCalculate(){
+        UnsupportedOperationException thrown = assertThrows(UnsupportedOperationException.class,() ->
+                        Calculator.calculate(5,'j',5)
+                , "UnsupportedOperationException was expected");
+        assertEquals("UnsupportedOperationException", thrown.getMessage(), "UnsupportedOperationException in calculate method wasn't thrown when getting wrong operation character");
     }
 }
