@@ -11,7 +11,7 @@ public class InputDoubleTest {
     @Disabled ("The enterDouble method is out of scope")
     @DisplayName("Entering, parsing and validating numbers input")
     @Test
-    void testEnterDouble() {
+    public void testEnterDouble() {
 
     }
 }

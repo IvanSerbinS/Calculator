@@ -1,5 +1,6 @@
 package com.it_academy.calculator;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -9,31 +10,31 @@ public class CalculatorTest {
 
     @DisplayName("Addition, expected -1")
     @Test
-    void testCalculateAddition(){
+    public void testCalculateAddition(){
         assertEquals(-1, Calculator.calculate(106.2,'+',-107.2),"Addition in calculate method works wrong");
     }
 
     @DisplayName("Subtraction, expected -213.4")
     @Test
-    void testCalculateSubtraction(){
+    public void testCalculateSubtraction(){
         assertEquals(-213.4, Calculator.calculate(-106.2,'-',107.2),"Subtraction in calculate method works wrong");
     }
 
     @DisplayName("Multiplication, expected 0")
     @Test
-    void testCalculateMultiplicationOfZeros(){
+    public void testCalculateMultiplicationOfZeros(){
         assertEquals(0, Calculator.calculate(0,'*',0), "Multiplication in calculate method works wrong");
     }
 
     @DisplayName("Division, expected 70.28724832214765")
     @Test
-    void testCalculateDivision(){
+    public void testCalculateDivision(){
         assertEquals(70.28724832214765, Calculator.calculate(52.364,'/',0.745), "Division in calculate method works wrong");
     }
 
     @DisplayName("Division by Zero, expected ArithmeticException")
     @Test
-    void testCalculateDivisionByZeroException(){
+    public void testCalculateDivisionByZeroException(){
         ArithmeticException thrown = assertThrows(ArithmeticException.class,() ->
                         Calculator.calculate(5,'/',0)
                 , "ArithmeticException was expected");
@@ -42,7 +43,7 @@ public class CalculatorTest {
 
     @DisplayName("Unsupported operation, expected UnsupportedOperationException")
     @Test
-    void testCalculate(){
+    public void testCalculate(){
         UnsupportedOperationException thrown = assertThrows(UnsupportedOperationException.class,() ->
                         Calculator.calculate(5,'j',5)
                 , "UnsupportedOperationException was expected");

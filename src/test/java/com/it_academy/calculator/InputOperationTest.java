@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class InputOperationTest {
+public class InputOperationTest {
 
 
     @Disabled ("The enterOperation method is out of scope")
     @DisplayName("Entering, parsing and validating operation input")
     @Test
-    void testEnterOperation() {
+    public void testEnterOperation() {
     }
 }

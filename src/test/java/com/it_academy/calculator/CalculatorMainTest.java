@@ -9,6 +9,6 @@ class CalculatorMainTest {
 
     @Disabled
     @Test
-    void main() {
+    public void main() {
     }
 }
