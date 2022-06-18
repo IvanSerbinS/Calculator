@@ -5,5 +5,5 @@ import org.junit.platform.suite.api.Suite;
 
 @Suite
 @SelectClasses({MathOperationTest.class, CalculatorTest.class})
-class SuiteAllTest {
+public class SuiteAllTest {
 }
