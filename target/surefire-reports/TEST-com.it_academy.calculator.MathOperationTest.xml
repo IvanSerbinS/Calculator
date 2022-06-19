@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.it_academy.calculator.MathOperationTest" time="0.094" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.it_academy.calculator.MathOperationTest" time="0.146" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,10 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.1.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\ivans\AppData\Local\Temp\surefire11083759597764712035\surefirebooter12336804216485434178.jar C:\Users\ivans\AppData\Local\Temp\surefire11083759597764712035 2022-06-18T18-37-56_391-jvmRun1 surefire7748193970008424818tmp surefire_010933731540311555194tmp"/>
+    <property name="sun.java.command" value="C:\Users\ivans\AppData\Local\Temp\surefire1306857941797059727\surefirebooter6812915421477840537.jar C:\Users\ivans\AppData\Local\Temp\surefire1306857941797059727 2022-06-19T20-55-28_464-jvmRun1 surefire10442418670732949680tmp surefire_012158337510830428079tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="E:\Serbin_Ivan\IT_academy\Automation\projects\calculator\target\test-classes;E:\Serbin_Ivan\IT_academy\Automation\projects\calculator\target\classes;C:\Users\ivans\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\ivans\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\ivans\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ivans\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\ivans\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ivans\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\ivans\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\ivans\.m2\repository\org\junit\platform\junit-platform-suite\1.8.1\junit-platform-suite-1.8.1.jar;C:\Users\ivans\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.1\junit-platform-suite-api-1.8.1.jar;C:\Users\ivans\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.8.1\junit-platform-suite-engine-1.8.1.jar;C:\Users\ivans\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.8.1\junit-platform-suite-commons-1.8.1.jar;C:\Users\ivans\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.1\junit-platform-launcher-1.8.1.jar;"/>
-    <property name="test" value="SuiteAllTest"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\ivans"/>
     <property name="user.language" value="ru"/>
@@ -31,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ivans\AppData\Local\Temp\surefire11083759597764712035\surefirebooter12336804216485434178.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ivans\AppData\Local\Temp\surefire1306857941797059727\surefirebooter6812915421477840537.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.1.1+2-6"/>
@@ -43,6 +42,7 @@
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="localRepository" value="C:\Users\ivans\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="include" value="SuiteTest"/>
     <property name="java.io.tmpdir" value="C:\Users\ivans\AppData\Local\Temp\"/>
     <property name="idea.version" value="2021.2"/>
     <property name="java.version" value="18.0.1.1"/>
@@ -58,8 +58,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="testAdd" classname="com.it_academy.calculator.MathOperationTest" time="0.048"/>
-  <testcase name="testSubtract" classname="com.it_academy.calculator.MathOperationTest" time="0.004"/>
+  <testcase name="testAdd" classname="com.it_academy.calculator.MathOperationTest" time="0.073"/>
+  <testcase name="testSubtract" classname="com.it_academy.calculator.MathOperationTest" time="0.017"/>
   <testcase name="testExceptionDivideByZero" classname="com.it_academy.calculator.MathOperationTest" time="0.005"/>
   <testcase name="testDivide" classname="com.it_academy.calculator.MathOperationTest" time="0.003"/>
   <testcase name="testMultiply" classname="com.it_academy.calculator.MathOperationTest" time="0.002"/>

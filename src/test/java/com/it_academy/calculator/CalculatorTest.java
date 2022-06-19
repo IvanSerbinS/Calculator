@@ -1,6 +1,5 @@
 package com.it_academy.calculator;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -43,7 +42,7 @@ public class CalculatorTest {
 
     @DisplayName("Unsupported operation, expected UnsupportedOperationException")
     @Test
-    public void testCalculate(){
+    public void testCalculateMethodThrowsUnsupportedOperationExceptionWhenGettingWrongOperation(){
         UnsupportedOperationException thrown = assertThrows(UnsupportedOperationException.class,() ->
                         Calculator.calculate(5,'j',5)
                 , "UnsupportedOperationException was expected");
