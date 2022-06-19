@@ -41,7 +41,8 @@ public class MathOperationTest {
     public void testExceptionDivideByZero() {
         ArithmeticException thrown = assertThrows(ArithmeticException.class, () -> MathOperation.divide(5, 0)
                 , "ArithmeticException was expected");
-        assertEquals("Division by zero is not allowed.", thrown.getMessage(),"ArithmeticException wasn't thrown in divide method when dividing by zero wasn't thrown");
+        assertEquals("Division by zero is not allowed.", thrown.getMessage(),
+                "ArithmeticException wasn't thrown in divide method when dividing by zero wasn't thrown");
     }
 
 }

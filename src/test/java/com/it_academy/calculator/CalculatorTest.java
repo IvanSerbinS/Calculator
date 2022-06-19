@@ -10,25 +10,29 @@ public class CalculatorTest {
     @DisplayName("Addition, expected -1")
     @Test
     public void testCalculateAddition(){
-        assertEquals(-1, Calculator.calculate(106.2,'+',-107.2),"Addition in calculate method works wrong");
+        assertEquals(-1, Calculator.calculate(106.2,'+',-107.2),
+                "Addition in calculate method works wrong");
     }
 
     @DisplayName("Subtraction, expected -213.4")
     @Test
     public void testCalculateSubtraction(){
-        assertEquals(-213.4, Calculator.calculate(-106.2,'-',107.2),"Subtraction in calculate method works wrong");
+        assertEquals(-213.4, Calculator.calculate(-106.2,'-',107.2),
+                "Subtraction in calculate method works wrong");
     }
 
     @DisplayName("Multiplication, expected 0")
     @Test
     public void testCalculateMultiplicationOfZeros(){
-        assertEquals(0, Calculator.calculate(0,'*',0), "Multiplication in calculate method works wrong");
+        assertEquals(0, Calculator.calculate(0,'*',0),
+                "Multiplication in calculate method works wrong");
     }
 
     @DisplayName("Division, expected 70.28724832214765")
     @Test
     public void testCalculateDivision(){
-        assertEquals(70.28724832214765, Calculator.calculate(52.364,'/',0.745), "Division in calculate method works wrong");
+        assertEquals(70.28724832214765, Calculator.calculate(52.364,'/',0.745),
+                "Division in calculate method works wrong");
     }
 
     @DisplayName("Division by Zero, expected ArithmeticException")
@@ -37,7 +41,8 @@ public class CalculatorTest {
         ArithmeticException thrown = assertThrows(ArithmeticException.class,() ->
                         Calculator.calculate(5,'/',0)
                 , "ArithmeticException was expected");
-        assertEquals("Division by zero is not allowed.", thrown.getMessage(),"ArithmeticException in time of dividing by zero in calculate method wasn't thrown");
+        assertEquals("Division by zero is not allowed.", thrown.getMessage(),
+                "ArithmeticException in time of dividing by zero in calculate method wasn't thrown");
     }
 
     @DisplayName("Unsupported operation, expected UnsupportedOperationException")
@@ -46,6 +51,8 @@ public class CalculatorTest {
         UnsupportedOperationException thrown = assertThrows(UnsupportedOperationException.class,() ->
                         Calculator.calculate(5,'j',5)
                 , "UnsupportedOperationException was expected");
-        assertEquals("UnsupportedOperationException", thrown.getMessage(), "UnsupportedOperationException in calculate method wasn't thrown when getting wrong operation character");
+        assertEquals("UnsupportedOperationException", thrown.getMessage(),
+                "UnsupportedOperationException in calculate method wasn't thrown " +
+                        "when getting wrong operation character");
     }
 }

@@ -2,7 +2,8 @@ package com.it_academy.calculator;
 
 public class Calculator {
 
-    public static double calculate(double a, char operation, double b) throws UnsupportedOperationException, ArithmeticException {
+    public static double calculate(double a, char operation, double b)
+            throws UnsupportedOperationException, ArithmeticException {
         switch (operation) {
             case ('+') -> {
                 return MathOperation.add(a, b);
